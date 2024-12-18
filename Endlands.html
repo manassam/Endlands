@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endlands - Minecraft Lifesteal Server</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s ease;
+        }
+        header {
+            text-align: center;
+            padding: 50px 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 5px solid #FF4500;
+        }
+        header h1 {
+            font-size: 4em;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px black;
+        }
+        header p {
+            font-size: 1.5em;
+            color: #ddd;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            border-bottom: 2px solid #FF4500;
+            padding-bottom: 5px;
+        }
+        .info, p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .server-details {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px black;
+        }
+        .server-details p {
+            margin: 8px 0;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .feature-item {
+            background: #333;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            color: #ddd;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #FF4500;
+            text-decoration: none;
+        }
+
+        /* Lifesteal Theme */
+       /* Lifesteal Theme */
+body {
+    background: url('https://files.oaiusercontent.com/file-X5mEc7s6aAB3u3HV8QWWaz?se=2024-12-18T17%3A39%3A04Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2aee2026-3d81-4401-8547-36adb290b66c.webp&sig=QnZ0Y342AhggkKR5gE3yv1dilYHovBGiSVFp84AXhwo%3D') no-repeat center center fixed;
+    background-size: cover;
+}
+
+        }
+        header h1 {
+            color: #FF4500;
+        }
+
+        /* Button Styles */
+        .copy-button {
+            background-color: #FF4500;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .copy-button:hover {
+            background-color: #e63e00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Endlands</h1>
+        <p>The most intense Lifesteal experience awaits!</p>
+    </header>
+    <div class="container">
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Endlands</h2>
+            <p class="info">Endlands is a Lifesteal Minecraft server where every battle matters! Steal hearts from your enemies in intense PvP battles and become the ultimate survivor. With custom plugins and a competitive community, you'll never experience a dull moment.</p>
+        </div>
+
+        <!-- Server Details Section -->
+        <div class="section server-details">
+            <h2>Server Information</h2>
+            <p><strong>Server IP:</strong> <span id="server-ip">play.endlands.com</span> <button class="copy-button" onclick="copyToClipboard('server-ip')">Click to Copy</button></p>
+            <p><strong>Email for Support:</strong> <span id="support-email">support@endlands.com</span> <button class="copy-button" onclick="copyToClipboard('support-email')">Click to Copy</button></p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="section">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Lifesteal Mechanics</h3>
+                    <p>Engage in heart-stealing battles and increase your life count by defeating opponents.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Intense PvP</h3>
+                    <p>Test your combat skills in thrilling player-versus-player fights.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Plugins</h3>
+                    <p>Unique gameplay mechanics tailored for the Lifesteal experience.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Leaderboards</h3>
+                    <p>Compete to climb the ranks and prove you're the best on the server.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player Stats Section -->
+        <div class="section stats">
+            <h2>Player Statistics</h2>
+            <p>players in server: <strong>soon</strong></p>
+            <p>players in discord: <strong>soon</strong></p>
+        </div>
+
+        <!-- Discord Section -->
+        <div class="discord-section">
+            <h2>Join Our Discord</h2>
+            <a href="https://discord.gg/w2b4sfSxYp" target="_blank" title="Join Endlands on Discord">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" style="width: 50px; height: 50px; border-radius: 8px;">
+            </a>
+            <p>Stay updated with the latest news and connect with our community.</p>
+        </div>
+
+        <!-- Store/Donation Section -->
+        <div class="section">
+            <h2>Support Us</h2>
+            <p class="info">Keep the server running and help us add new features by donating! Visit our <a href="https://discord.com/channels/1227182647474782219/1227188112896167946">store</a> to contribute and earn exclusive in-game rewards.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Endlands. op in the chat. | <a href="https://youtube.com/shorts/a9Q_Fb0qdcQ?si=7AWNsG2VSGT5O14n">chin tapak dam dam</a></p>
+    </footer>
+
+    <script>
+        function copyToClipboard(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            // Optional: Change button text for a short period to show success
+            var button = document.querySelector(`#${elementId} + .copy-button`);
+            button.innerText = 'Copied!';
+            setTimeout(function() {
+                button.innerText = 'Click to Copy';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
